@@ -1,0 +1,6 @@
+framework module Pods_MJRefresh_Rx {
+  umbrella header "Pods-MJRefresh+Rx-umbrella.h"
+
+  export *
+  module * { export * }
+}
