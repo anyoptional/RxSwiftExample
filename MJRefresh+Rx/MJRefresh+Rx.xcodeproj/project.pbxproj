@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		51168A6C1EE487669AD358C5 /* Pods_MJRefresh_Rx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88746F9229965AB40BE4E66D /* Pods_MJRefresh_Rx.framework */; };
+		C46E46162160C08600DE9DEE /* Observable+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E46112160C08600DE9DEE /* Observable+API.swift */; };
+		C46E46172160C08600DE9DEE /* APIInfrastructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E46122160C08600DE9DEE /* APIInfrastructure.swift */; };
+		C46E46182160C08600DE9DEE /* APICache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E46132160C08600DE9DEE /* APICache.swift */; };
+		C46E46192160C08600DE9DEE /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E46142160C08600DE9DEE /* APIError.swift */; };
+		C46E461A2160C08600DE9DEE /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E46152160C08600DE9DEE /* APIProvider.swift */; };
 		CB84B07F20C3C8320022870F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB84B07E20C3C8320022870F /* AppDelegate.swift */; };
 		CB84B08120C3C8320022870F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB84B08020C3C8320022870F /* ViewController.swift */; };
 		CB84B08420C3C8320022870F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB84B08220C3C8320022870F /* Main.storyboard */; };
@@ -21,6 +26,11 @@
 		5AAAABBD547E4576842A6373 /* Pods-MJRefresh+Rx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJRefresh+Rx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MJRefresh+Rx/Pods-MJRefresh+Rx.debug.xcconfig"; sourceTree = "<group>"; };
 		88746F9229965AB40BE4E66D /* Pods_MJRefresh_Rx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MJRefresh_Rx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB26D6085E276D847E92F36 /* Pods-MJRefresh+Rx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJRefresh+Rx.release.xcconfig"; path = "Pods/Target Support Files/Pods-MJRefresh+Rx/Pods-MJRefresh+Rx.release.xcconfig"; sourceTree = "<group>"; };
+		C46E46112160C08600DE9DEE /* Observable+API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+API.swift"; sourceTree = "<group>"; };
+		C46E46122160C08600DE9DEE /* APIInfrastructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIInfrastructure.swift; sourceTree = "<group>"; };
+		C46E46132160C08600DE9DEE /* APICache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICache.swift; sourceTree = "<group>"; };
+		C46E46142160C08600DE9DEE /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		C46E46152160C08600DE9DEE /* APIProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
 		CB84B07B20C3C8320022870F /* MJRefresh+Rx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MJRefresh+Rx.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB84B07E20C3C8320022870F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB84B08020C3C8320022870F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,9 +63,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C46E46062160C04500DE9DEE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C46E46132160C08600DE9DEE /* APICache.swift */,
+				C46E46142160C08600DE9DEE /* APIError.swift */,
+				C46E46122160C08600DE9DEE /* APIInfrastructure.swift */,
+				C46E46152160C08600DE9DEE /* APIProvider.swift */,
+				C46E46112160C08600DE9DEE /* Observable+API.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		CB84B07220C3C8320022870F = {
 			isa = PBXGroup;
 			children = (
+				C46E46062160C04500DE9DEE /* Network */,
 				CB84B07D20C3C8320022870F /* MJRefresh+Rx */,
 				CB84B07C20C3C8320022870F /* Products */,
 				DC76F1EDD2EDB7AA06EC83B2 /* Pods */,
@@ -220,9 +243,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB84B08120C3C8320022870F /* ViewController.swift in Sources */,
+				C46E46172160C08600DE9DEE /* APIInfrastructure.swift in Sources */,
+				C46E46162160C08600DE9DEE /* Observable+API.swift in Sources */,
 				CB84B09420C3CB7D0022870F /* ViewControllerReactor.swift in Sources */,
 				CB84B09220C3C9320022870F /* MJRefresh+Rx.swift in Sources */,
+				C46E46192160C08600DE9DEE /* APIError.swift in Sources */,
 				CB84B07F20C3C8320022870F /* AppDelegate.swift in Sources */,
+				C46E46182160C08600DE9DEE /* APICache.swift in Sources */,
+				C46E461A2160C08600DE9DEE /* APIProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
